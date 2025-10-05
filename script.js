@@ -13,13 +13,14 @@ links.forEach(link => {
 // NavBar
   const navbar = document.querySelector('.navbar');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) { // adjust threshold if needed
-      navbar.classList.add('scrolled');
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
     } else {
-      navbar.classList.remove('scrolled');
+        navbar.classList.remove('scrolled');
     }
-  });
+});
 
 
 function toggleMenu() {
