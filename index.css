@@ -200,16 +200,32 @@
         color: black;
     }
 
-    /* Hero adjustments */
+    /* Hero section adjustments */
+    .hero-section {
+        height: 60vh; /* reduce height for mobile screens */
+        background-size: cover; /* ensure image covers area */
+        background-position: center top; /* adjust focal point */
+    }
+
+    .hero-section::after {
+        background: rgba(0, 0, 0, 0.4); /* keep overlay consistent */
+    }
+
+    .hero-content {
+        padding: 10px 20px; /* reduce padding for mobile */
+    }
+
     .hero-content h1 {
-        font-size: 36px;
+        font-size: 28px; /* smaller title */
     }
+
     .hero-content p {
-        font-size: 16px;
+        font-size: 14px; /* smaller subtitle */
     }
+
     .hero-button {
-        padding: 12px 20px;
-        font-size: 16px;
+        padding: 10px 18px;
+        font-size: 15px;
     }
 
     /* Slider adjustments */
