@@ -1,0 +1,174 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fffaf3; /* full-page warm background */
+}
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Inria Serif', serif;
+    background: transparent; /* <-- transparent background */
+}
+/* header bar scroll */
+.navbar.scrolled {
+    background: #fffaf3; /* solid background when scrolled */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* Change text color when scrolled */
+.navbar.scrolled .logo,
+.navbar.scrolled .nav-links li a {
+    color: #000; /* black text */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+  
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+  
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.story-section {
+    padding: 80px 40px; /* reduce horizontal padding */
+    background-color: #fffaf3; /* warm, inviting background */
+    display: flex;
+    flex-direction: column; /* stack content vertically */
+    align-items: center;
+    gap: 40px;
+}
+
+.story-content {
+    max-width: 800px; /* narrower content */
+    text-align: center;
+    font-family: 'Inria Serif', serif;
+    color: #3b3b3b;
+    line-height: 1.8;
+}
+
+.story-content h1 {
+    font-size: 42px; /* slightly smaller for narrow layout */
+    color: #e76f51; /* warm accent */
+    margin-bottom: 25px;
+}
+
+.story-content p {
+    font-size: 17px; /* slightly smaller text for readability */
+    margin-bottom: 18px;
+}
+
+/* Image */
+.story-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* spacing from story content */
+}
+
+.story-image img {
+    width: 70%;          /* narrower image to match content */
+    max-width: 700px;    /* limit max size */
+    height: auto;        /* maintain aspect ratio */
+    border-radius: 12px; /* rounded corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow */
+    transition: transform 0.5s ease; /* optional hover effect */
+}
+
+.story-image img:hover {
+    transform: scale(1.02); /* subtle zoom on hover */
+}
+
+/* Hide hamburger by default on desktop */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  
+  /* Only show on small screens */
+  @media (max-width: 900px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #fffaf3;
+      position: absolute;
+      top: 60px; /* below navbar */
+      left: 0;
+      padding: 20px 0;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    /* Stack the story section content vertically */
+    .story-section {
+      padding: 60px 20px;
+    }
+  
+    .story-content h1 {
+      font-size: 36px;
+    }
+  
+    .story-content p {
+      font-size: 16px;
+    }
+  
+    .story-image img {
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .footer-content {
+        flex-direction: column; /* stack social media and business hours */
+        gap: 20px;              /* smaller gap vertically */
+        align-items: center;    /* center each item horizontally */
+    }
+
+    .social-media {
+        text-align: center;     /* center social links */
+    }
+
+    .business-hours {
+        text-align: center;     /* center hours text */
+    }
+
+    /* Optional: adjust social links for smaller screens */
+    .social-media a {
+        margin: 5px 10px;       /* smaller spacing for mobile */
+    }
+
+    .business-hours h3 {
+        font-size: 18px;        /* slightly smaller text */
+    }
+  }

@@ -1,0 +1,230 @@
+/* Navbar styles */
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: black;
+    font-family: 'Inria Serif', serif;
+    background: transparent; /* <-- transparent background */
+}
+/* header bar scroll */
+.navbar.scrolled {
+    background: #fffaf3; /* solid background when scrolled */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* Change text color when scrolled */
+.navbar.scrolled .logo,
+.navbar.scrolled .nav-links li a {
+    color: #000; /* black text */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+  
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+  
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.contact-section {
+    padding: 80px 20px;
+    background-color: #fffaf3;
+    font-family: 'Inria Serif', serif;
+}
+
+.contact-section h1 {
+    font-size: 48px;
+    color: #e76f51;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: flex-start; /* let items align to top but not forced */
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1300px; /* optional max width for the whole section */
+    margin: 0 auto; /* center the wrapper itself */
+}
+
+/* offset the map lower than the form */
+.map-container {
+    flex: 1 1 400px;
+    max-width: 600px;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-top: 40px; /* adjust this to move the map down */
+}
+
+
+/* Form */
+.contact-form-container {
+    flex: 1 1 400px; /* grow/shrink with min width */
+    max-width: 600px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #3b3b3b;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Inria Serif', serif;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #e76f51;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .map-container, .contact-form-container {
+        max-width: 100%;
+    }
+}
+
+/* ===============================
+   MEDIA QUERIES FOR MOBILE
+   =============================== */
+
+/* Hide hamburger by default on desktop */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000000;
+}
+
+@media (max-width: 900px) {
+    /* Navbar: show hamburger, hide links */
+    .nav-links {
+        display: none; /* hide links until hamburger clicked */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fffaf3;
+        position: absolute;
+        top: 60px; /* below navbar */
+        left: 0;
+        padding: 20px 0;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* show links when hamburger clicked */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Contact wrapper: stack map and form vertically */
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Map and form full width */
+    .map-container,
+    .contact-form-container {
+        max-width: 100%;
+        margin-top: 0; /* remove map offset on mobile */
+    }
+
+    /* Adjust form input sizes */
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+
+    /* Section title */
+    .contact-section h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column; /* stack social media and business hours */
+        gap: 20px;              /* smaller gap vertically */
+        align-items: center;    /* center each item horizontally */
+    }
+
+    .social-media {
+        text-align: center;     /* center social links */
+    }
+
+    .business-hours {
+        text-align: center;     /* center hours text */
+    }
+
+    /* Optional: adjust social links for smaller screens */
+    .social-media a {
+        margin: 5px 10px;       /* smaller spacing for mobile */
+    }
+
+    .business-hours h3 {
+        font-size: 18px;        /* slightly smaller text */
+    }
+}

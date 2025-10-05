@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Restaurant Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Between the Bites</div>
+            <ul class="nav-links">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+          </nav>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+          <h1>Between the Bites</h1>
+          <p>Enjoy the delicious moments, any time of day.</p>
+          <a href="menu.html" class="hero-button">View Our Menu</a>
+        </div>
+      </section>
+      <section class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="slider-container">
+            <div class="slider-wrapper">
+          <div class="slide"><img src="images/french_toast.jpg" alt="French Toast"></div>
+          <div class="slide"><img src="images/avocado_toast.jpg" alt="avocado_toast"></div>
+          <div class="slide"><img src="images/interior.jpg" alt="interior"></div>
+          <div class="slide"><img src="images/interior2.jpg" alt="interior2"></div>
+          <div class="slide"><img src="images/shrimp_pasta.jpg" alt="shrimp_pasta"></div>
+          <div class="slide"><img src="images/chicken_waffle.jpg" alt="chicken_waffle"></div>  
+          <div class="slide"><img src="images/food.jpg" alt="food"></div>    
+          <div class="slide"><img src="images/egg_croissant.jpg" alt="egg_croissant"></div>  
+            </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        </div>
+      </section>
+      
+      <footer class="footer">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            </div>
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                <p>Sat - Sun: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Restaurant Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Between the Bites</div>
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html" class="active">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+          </nav>
+    </header>
+    <section class="menu-section">
+        <h1>Our Menu</h1>
+    
+        <!-- Main Dishes -->
+        <h2 class="category-title">Main</h2>
+        <div class="menu-container">
+            <div class="menu-card">
+                <h3>Pancakes Deluxe</h3>
+                <p>Fluffy pancakes served with maple syrup and fresh berries.</p>
+                <span class="price">$12</span>
+            </div>
+            <div class="menu-card">
+                <h3>Shrimp Pasta</h3>
+                <p>Fresh shrimp sautéed with garlic and herbs, served over linguine.</p>
+                <span class="price">$16</span>
+            </div>
+            <div class="menu-card">
+                <h3>Beef Burger</h3>
+                <p>Juicy beef patty with cheddar, lettuce, tomato, and house sauce on a brioche bun.</p>
+                <span class="price">$14</span>
+            </div>
+        </div>
+    
+        <!-- Specials -->
+        <h2 class="category-title">Specials</h2>
+        <div class="menu-container">
+            <div class="menu-card">
+                <h3>Breakfast Burrito</h3>
+                <p>Eggs, cheese, and sausage wrapped in a warm tortilla, served with salsa.</p>
+                <span class="price">$11</span>
+            </div>
+            <div class="menu-card">
+                <h3>French Toast</h3>
+                <p>Thick slices of bread dipped in cinnamon egg batter, served with syrup and berries.</p>
+                <span class="price">$11</span>
+            </div>
+        </div>
+    
+        <!-- Combos -->
+        <h2 class="category-title">Combos</h2>
+        <div class="menu-container">
+            <div class="menu-card">
+                <h3>Pancakes & Coffee Combo</h3>
+                <p>Two pancakes with a cup of our house coffee.</p>
+                <span class="price">$14</span>
+            </div>
+            <div class="menu-card">
+                <h3>Omelette & Toast Combo</h3>
+                <p>Veggie omelette served with sourdough toast.</p>
+                <span class="price">$15</span>
+            </div>
+        </div>
+    
+        <!-- Sides -->
+        <h2 class="category-title">Sides</h2>
+        <div class="menu-container">
+            <div class="menu-card">
+                <h3>Hash Browns</h3>
+                <p>Crispy golden potatoes served with ketchup.</p>
+                <span class="price">$5</span>
+            </div>
+            <div class="menu-card">
+                <h3>Fruit Bowl</h3>
+                <p>Seasonal fresh fruits.</p>
+                <span class="price">$6</span>
+            </div>
+        </div>
+    
+        <!-- Drinks -->
+        <h2 class="category-title">Drinks</h2>
+        <div class="menu-container">
+            <div class="menu-card">
+                <h3>Latte</h3>
+                <p>Creamy espresso latte.</p>
+                <span class="price">$4</span>
+            </div>
+            <div class="menu-card">
+                <h3>Fresh Juice</h3>
+                <p>Orange, apple, or carrot.</p>
+                <span class="price">$5</span>
+            </div>
+        </div>
+        
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            </div>
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                <p>Sat - Sun: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
