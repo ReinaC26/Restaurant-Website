@@ -151,19 +151,16 @@
   
   
  /* ===============================
-   MEDIA QUERIES FOR MOBILE
+   HAMBURGER DEFAULT STYLES
    =============================== */
-
-    /* Default hamburger on mobile (top of page) */
-    .hamburger {
-        display: none; /* hidden on desktop */
-        font-size: 28px;
-        cursor: pointer;
-        color: black; /* icon color */
-        background-color: white; /* background behind icon */
-        padding: 5px 10px;
-        border-radius: 4px;
-    }
+.hamburger {
+    display: none; /* hidden on desktop */
+    font-size: 28px;
+    cursor: pointer;
+    color: white; /* top of page: white icon */
+    background: transparent; /* no background */
+    border: none;
+}
 
 /* ===============================
    MEDIA QUERIES FOR MOBILE
@@ -173,29 +170,32 @@
         display: block;
     }
 
-    /* Change hamburger background when scrolled */
-    .navbar.scrolled .hamburger {
-        background-color: black; /* change background after scroll */
-        color: black; /* keep icon black */
-    }
-
-    /* Menu links on mobile */
+    /* Mobile menu links */
     .nav-links {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fffaf3;
+        position: absolute;
+        top: 60px; /* below navbar */
+        left: 0;
+        padding: 20px 0;
+        gap: 10px;
+        text-align: center;
     }
+
     .nav-links.active {
         display: flex;
-        flex-direction: column;
-        gap: 15px;
-        background-color: #fffaf3;
+    }
+
+    /* Hamburger icon color when scrolled */
+    .navbar.scrolled .hamburger {
+        color: black; /* icon turns black after scroll */
+    }
+
+    /* Dropdown links always black */
+    .nav-links li a {
         color: black;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 20px;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     /* Hero adjustments */
