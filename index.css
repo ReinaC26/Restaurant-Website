@@ -170,22 +170,24 @@
         display: block;
     }
 
-    /* Mobile menu links */
+    /* Navbar: show hamburger, hide links */
     .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #fffaf3;
-        position: absolute;
-        top: 60px; /* below navbar */
-        left: 0;
-        padding: 20px 0;
-        gap: 10px;
-        text-align: center;
+        display: none; /* hide links on mobile until hamburger clicked */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* show links when hamburger clicked */
+        flex-direction: column;
+        gap: 15px;
+        background-color: #fffaf3;
+        color: black;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     /* Hamburger icon color when scrolled */
