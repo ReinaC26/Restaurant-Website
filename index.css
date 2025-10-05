@@ -154,21 +154,37 @@
    MEDIA QUERIES FOR MOBILE
    =============================== */
 
-   /* Hide hamburger by default on desktop */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #000000;
-  }
+    /* Default hamburger on mobile (top of page) */
+    .hamburger {
+        display: none; /* hidden on desktop */
+        font-size: 28px;
+        cursor: pointer;
+        color: black; /* icon color */
+        background-color: white; /* background behind icon */
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
 
+/* ===============================
+   MEDIA QUERIES FOR MOBILE
+   =============================== */
 @media (max-width: 900px) {
-    /* Navbar: show hamburger, hide links */
+    .hamburger {
+        display: block;
+    }
+
+    /* Change hamburger background when scrolled */
+    .navbar.scrolled .hamburger {
+        background-color: black; /* change background after scroll */
+        color: black; /* keep icon black */
+    }
+
+    /* Menu links on mobile */
     .nav-links {
-        display: none; /* hide links on mobile until hamburger clicked */
+        display: none;
     }
     .nav-links.active {
-        display: flex; /* show links when hamburger clicked */
+        display: flex;
         flex-direction: column;
         gap: 15px;
         background-color: #fffaf3;
@@ -180,10 +196,6 @@
         padding: 20px;
         border-radius: 0 0 8px 8px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    .hamburger {
-        display: block;
     }
 
     /* Hero adjustments */
