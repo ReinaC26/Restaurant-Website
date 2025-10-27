@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Restaurant Page</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="shoppingCart.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -14,45 +14,66 @@
         <nav class="navbar">
             <div class="logo">Between the Bites</div>
             <ul class="nav-links">
-              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="menu.html">Menu</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li>
                 <a href="shoppingCart.html">
-                  <img src="images/cart1.png" alt="Shopping Cart" class="cart-icon">
+                  <img src="images/cart2.png" alt="Shopping Cart" class="cart-icon">
                 </a>
               </li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">☰</div>
           </nav>
     </header>
-    <section class="hero-section">
-        <div class="hero-content">
-          <h1>Between the Bites</h1>
-          <p>Enjoy the delicious moments, any time of day.</p>
-          <a href="menu.html" class="hero-button">View Our Menu</a>
+    <!-- Page Header -->
+  <section class="cart-header">
+    <h1>Your Cart</h1>
+    <p>Review your selected dishes before checkout</p>
+  </section>
+
+  <!-- Cart Items -->
+  <section class="cart-section">
+    <div class="cart-container">
+
+      <!-- Example Cart Item -->
+      <div class="cart-item">
+        <img src="images/dish1.jpg" alt="Dish Image">
+        <div class="cart-details">
+          <h3>Grilled Salmon</h3>
+          <p class="price">$18.99</p>
+          <div class="quantity">
+            <label>Quantity:</label>
+            <input type="number" value="1" min="1">
+          </div>
         </div>
-      </section>
-      <section class="gallery-section">
-        <h2>Gallery</h2>
-        <div class="slider-container">
-            <div class="slider-wrapper">
-          <div class="slide"><img src="images/french_toast.jpg" alt="French Toast"></div>
-          <div class="slide"><img src="images/avocado_toast.jpg" alt="avocado_toast"></div>
-          <div class="slide"><img src="images/interior.jpg" alt="interior"></div>
-          <div class="slide"><img src="images/interior2.jpg" alt="interior2"></div>
-          <div class="slide"><img src="images/shrimp_pasta.jpg" alt="shrimp_pasta"></div>
-          <div class="slide"><img src="images/chicken_waffle.jpg" alt="chicken_waffle"></div>  
-          <div class="slide"><img src="images/food.jpg" alt="food"></div>    
-          <div class="slide"><img src="images/egg_croissant.jpg" alt="egg_croissant"></div>  
-            </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+
+      <div class="cart-item">
+        <img src="images/dish2.jpg" alt="Dish Image">
+        <div class="cart-details">
+          <h3>Avocado Toast</h3>
+          <p class="price">$12.50</p>
+          <div class="quantity">
+            <label>Quantity:</label>
+            <input type="number" value="2" min="1">
+          </div>
         </div>
-      </section>
-      
-      <footer class="footer">
+        <button class="remove-btn">Remove</button>
+      </div>
+
+      <!-- Total & Checkout -->
+      <div class="cart-total">
+        <h3>Total: $43.99</h3>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </section>
+        
+    </section>
+    <footer class="footer">
         <div class="footer-content">
             <div class="social-media">
                 <a href="https://www.facebook.com" target="_blank">Facebook</a>
@@ -66,5 +87,6 @@
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

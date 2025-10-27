@@ -23,6 +23,10 @@
 .navbar.scrolled .nav-links li a {
     color: #000; /* black text */
 }
+.cart-icon{
+    width: 20px;
+    height: 20px;
+}
 
 .logo {
     font-size: 24px;

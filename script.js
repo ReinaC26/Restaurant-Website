@@ -27,6 +27,21 @@ function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
 
+if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    const cartIcon = document.querySelector('.cart-icon');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+      cartIcon.src = "images/cart2.png"; // swap icon
+    } else {
+      navbar.classList.remove('scrolled');
+      cartIcon.src = "images/cart1.png";
+    }
+  });
+}
+
+
 //home page slider
 const wrapper = document.querySelector('.slider-wrapper');
 const slides = document.querySelectorAll('.slide');

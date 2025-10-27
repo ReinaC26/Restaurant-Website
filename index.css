@@ -9,7 +9,13 @@
 .navbar.scrolled .nav-links li a {
     color: #000; /* black text */
 }
-
+.cart-icon{
+  width: 20px;
+  height: 20px;
+}
+.navbar.scrolled .cart-icon {
+  content: url("images/cart2.png");
+}
 /* Hero Section */
 .hero-section {
     position: relative;
