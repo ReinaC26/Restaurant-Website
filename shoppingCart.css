@@ -66,11 +66,12 @@
   }
   
   .cart-section {
-    padding: 40px 20px;
+    padding: 20px 20px;
     background-color: #fffaf3;
     display: flex;
-    justify-content: center;
-  }
+    flex-direction: column; /* stack children vertically */
+    align-items: center; /* center the column */
+}
   
   .cart-container {
     width: 100%;
@@ -122,20 +123,20 @@
     border: 1px solid #ccc;
   }
   
-  .remove-btn {
+/* Remove button stays on the right */
+.cart-item .remove-btn {
+    position: absolute;
+    right: 20vw;
     background-color: #f4a261;
     color: white;
     border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: 6px 12px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
   }
-  
-  .remove-btn:hover {
-    transform: scale(1.05);
-  }
-  
+
   /* Total & Checkout */
   .cart-total {
     display: flex;
@@ -144,6 +145,18 @@
     padding-top: 20px;
     border-top: 2px solid #f4a261;
   }
+
+  #cart-total {
+    display: flex;
+    justify-content: flex-end; /* everything aligned to the right */
+    align-items: center;
+    gap: 20px; /* space between total and button */
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 20px;
+    border-top: 2px solid #f4a261;
+    margin-top: 20px;
+}
   
   .checkout-btn {
     background-color: #e76f51;
@@ -188,6 +201,16 @@
       flex-direction: column;
       gap: 20px;
       align-items: flex-start;
+    }
+
+    #cart-total {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-end; /* right-align in mobile too */
+    }
+
+    #cart-total .checkout-btn {
+        width: 100%; /* optional: make button full width on mobile */
     }
   }
   

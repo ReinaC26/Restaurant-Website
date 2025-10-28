@@ -84,6 +84,7 @@
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%; /* let card fill the grid cell */
+    position: relative; 
 }
 
 
@@ -93,6 +94,12 @@
     box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
+.menu-img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 /* Dish name */
 .menu-card h3 {
     font-size: 20px;
@@ -113,6 +120,37 @@
     font-size: 18px;
     color: #e76f51;
 }
+
+.add-to-cart {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #f8b400;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .add-to-cart:hover {
+    background-color: #ffca3a;      /* lighter shade on hover */
+    transform: translateY(-2px);    /* small lift */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  .add-to-cart:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
 
 /* ===============================
    MEDIA QUERIES FOR MOBILE

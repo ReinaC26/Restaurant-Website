@@ -1,92 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Restaurant Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="shoppingCart.css">
-    <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Shopping Cart | Between the Bites</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="shoppingCart.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Between the Bites</div>
-            <ul class="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li>
-                <a href="shoppingCart.html">
-                  <img src="images/cart2.png" alt="Shopping Cart" class="cart-icon">
-                </a>
-              </li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
-          </nav>
-    </header>
-    <!-- Page Header -->
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Between the Bites</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="shoppingCart.html">
+            <img src="images/cart2.png" alt="Shopping Cart" class="cart-icon" />
+          </a>
+        </li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- Cart Header -->
+  <main>
   <section class="cart-header">
     <h1>Your Cart</h1>
     <p>Review your selected dishes before checkout</p>
   </section>
 
-  <!-- Cart Items -->
   <section class="cart-section">
-    <div class="cart-container">
-
-      <!-- Example Cart Item -->
-      <div class="cart-item">
-        <img src="images/dish1.jpg" alt="Dish Image">
-        <div class="cart-details">
-          <h3>Grilled Salmon</h3>
-          <p class="price">$18.99</p>
-          <div class="quantity">
-            <label>Quantity:</label>
-            <input type="number" value="1" min="1">
-          </div>
-        </div>
-        <button class="remove-btn">Remove</button>
-      </div>
-
-      <div class="cart-item">
-        <img src="images/dish2.jpg" alt="Dish Image">
-        <div class="cart-details">
-          <h3>Avocado Toast</h3>
-          <p class="price">$12.50</p>
-          <div class="quantity">
-            <label>Quantity:</label>
-            <input type="number" value="2" min="1">
-          </div>
-        </div>
-        <button class="remove-btn">Remove</button>
-      </div>
-
-      <!-- Total & Checkout -->
-      <div class="cart-total">
-        <h3>Total: $43.99</h3>
-        <button class="checkout-btn">Proceed to Checkout</button>
-      </div>
+    <div class="cart-container" id="cart-container">
+      <!-- Items will be dynamically inserted here -->
+    </div>
+  
+    <!-- Total & Checkout: stays below all items -->
+    <div class="cart-total" id="cart-total">
+      <!-- Total will be dynamically updated by JS -->
     </div>
   </section>
-        
-    </section>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="social-media">
-                <a href="https://www.facebook.com" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <a href="https://www.twitter.com" target="_blank">Twitter</a>
-            </div>
-            <div class="business-hours">
-                <h3>Business Hours</h3>
-                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-                <p>Sat - Sun: 9:00 AM - 6:00 PM</p>
-            </div>
-        </div>
-    </footer>
-    
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+      </div>
+      <div class="business-hours">
+        <h3>Business Hours</h3>
+        <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+        <p>Sat - Sun: 9:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
