@@ -209,8 +209,9 @@
     }
   
     .menu-card {
-      padding: 15px;
-      width: 100%;
+        display: flex;
+        flex-direction: column; /* stack image and content vertically */
+        overflow: visible;      /* ensure image isn't clipped */
     }
   
     .menu-img {
