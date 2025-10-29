@@ -236,7 +236,7 @@
     .add-to-cart {
         width: 40%;        /* let button size itself */
         align-self: flex-end; /* push button to the right */
-        margin-top: 10px;   /* spacing from content above */
+        margin-top: 20px;   /* spacing from content above */
     }
   
     /* Footer adjustments */
