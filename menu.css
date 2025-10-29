@@ -234,9 +234,10 @@
     }
   
     .add-to-cart {
-        width: 40%;        /* let button size itself */
-        align-self: flex-end; /* push button to the right */
-        margin-top: 20px;   /* spacing from content above */
+        width: auto;             /* button width based on content */
+        max-width: 150px;        /* optional max width to prevent covering text */
+        align-self: flex-end;    /* push button to the right */
+        margin-top: 15px;        /* space above button */
     }
   
     /* Footer adjustments */
