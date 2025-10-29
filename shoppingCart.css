@@ -201,6 +201,8 @@
     font-size: 28px;
     cursor: pointer;
     color: #000000;
+    position: relative; /* or absolute if needed */
+    z-index: 100;        /* higher than navbar children */
 }
 
 @media (max-width: 900px) {
