@@ -171,18 +171,19 @@
 /* ===============================
    MEDIA QUERIES FOR MOBILE
    =============================== */
-@media (max-width: 900px) {
+   @media (max-width: 900px) {
+    /* Hamburger icon visible on mobile */
     .hamburger {
         display: block;
     }
 
-    /* Navbar: show hamburger, hide links */
+    /* Navbar links hidden by default, shown when active */
     .nav-links {
-        display: none; /* hide links on mobile until hamburger clicked */
+        display: none;
     }
 
     .nav-links.active {
-        display: flex; /* show links when hamburger clicked */
+        display: flex;
         flex-direction: column;
         gap: 15px;
         background-color: #fffaf3;
@@ -198,19 +199,19 @@
 
     /* Hamburger icon color when scrolled */
     .navbar.scrolled .hamburger {
-        color: black; /* icon turns black after scroll */
+        color: black;
     }
 
-    /* Dropdown links always black */
+    /* Navbar dropdown links always black */
     .nav-links li a {
         color: black;
     }
 
     /* Hero section adjustments */
     .hero-section {
-        height: 60vh; /* reduce height for mobile screens */
-        background-size: cover; /* ensure image covers area */
-        background-position: center top; /* adjust focal point */
+        height: 60vh; /* reduce height for mobile */
+        background-size: cover;
+        background-position: center top;
     }
 
     .hero-section::after {
@@ -218,15 +219,17 @@
     }
 
     .hero-content {
-        padding: 10px 20px; /* reduce padding for mobile */
+        padding: 10px 20px; /* less padding for mobile */
     }
 
     .hero-content h1 {
         font-size: 28px; /* smaller title */
+        line-height: 1.2;
     }
 
     .hero-content p {
         font-size: 14px; /* smaller subtitle */
+        margin-bottom: 20px;
     }
 
     .hero-button {
@@ -235,35 +238,41 @@
     }
 
     /* Slider adjustments */
+    .slider-container {
+        width: 95%;
+        padding: 20px 0;
+    }
+
     .slide img {
         width: 90%;
         height: auto;
     }
+
     .prev, .next {
         font-size: 20px;
         padding: 8px 12px;
     }
 
+    /* Footer adjustments */
     .footer-content {
-        flex-direction: column; /* stack social media and business hours */
-        gap: 20px;              /* smaller gap vertically */
-        align-items: center;    /* center each item horizontally */
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
 
     .social-media {
-        text-align: center;     /* center social links */
+        text-align: center;
     }
 
     .business-hours {
-        text-align: center;     /* center hours text */
+        text-align: center;
     }
 
-    /* Optional: adjust social links for smaller screens */
     .social-media a {
-        margin: 5px 10px;       /* smaller spacing for mobile */
+        margin: 5px 10px;
     }
 
     .business-hours h3 {
-        font-size: 18px;        /* slightly smaller text */
+        font-size: 18px;
     }
 }

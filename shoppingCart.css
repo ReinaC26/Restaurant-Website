@@ -202,33 +202,81 @@
     cursor: pointer;
     color: #000000;
 }
+
+@media (max-width: 900px) {
+    /* Navbar adjustments */
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
   
-  /* Mobile Responsive */
-  @media (max-width: 900px) {
+    .hamburger {
+      display: block;
+    }
+  
+    /* Cart Items stacked vertically */
     .cart-item {
       flex-direction: column;
       align-items: flex-start;
+      padding: 10px;
+      gap: 10px;
+      position: relative;
     }
   
     .cart-item img {
       width: 100%;
       max-width: 250px;
+      border-radius: 12px;
     }
   
-    .cart-total {
-      flex-direction: column;
-      gap: 20px;
-      align-items: flex-start;
+    .cart-details {
+      width: 100%;
     }
-
+  
+    .cart-details h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+  
+    .cart-details .price {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  
+    .quantity-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  
+    /* Remove button moves below item details */
+    .cart-item .remove-btn {
+      position: relative;
+      right: auto;
+      margin-top: 10px;
+    }
+  
+    /* Empty Cart button on the bottom left with total & checkout */
     #cart-total {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-end; /* right-align in mobile too */
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-end;
+      width: 100%;
     }
-
+  
     #cart-total .checkout-btn {
-        width: 100%; /* optional: make button full width on mobile */
+      width: 100%; /* full width */
+    }
+  
+    .empty-cart-btn {
+      align-self: flex-start; /* left-aligned */
+      margin-bottom: 10px;
+    }
+  
+    /* Cart header padding adjustments */
+    .cart-header {
+      padding: 40px 15px 10px;
     }
   }
   

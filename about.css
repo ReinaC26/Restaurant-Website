@@ -108,19 +108,22 @@ body, html {
   }
   
   
-  /* Only show on small screens */
-  @media (max-width: 900px) {
+  /* ===============================
+   Responsive: Mobile / Tablet
+   =============================== */
+@media (max-width: 900px) {
+    /* Hamburger visible on mobile */
     .hamburger {
-      display: block;
+        display: block;
     }
-  
-    /* Navbar: show hamburger, hide links */
+
+    /* Navbar links dropdown */
     .nav-links {
-        display: none; /* hide links on mobile until hamburger clicked */
+        display: none;
     }
 
     .nav-links.active {
-        display: flex; /* show links when hamburger clicked */
+        display: flex;
         flex-direction: column;
         gap: 15px;
         background-color: #fffaf3;
@@ -133,45 +136,45 @@ body, html {
         border-radius: 0 0 8px 8px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
-  
-    /* Stack the story section content vertically */
+
+    /* Story Section adjustments */
     .story-section {
-      padding: 60px 20px;
-    }
-  
-    .story-content h1 {
-      font-size: 36px;
-    }
-  
-    .story-content p {
-      font-size: 16px;
-    }
-  
-    .story-image img {
-      width: 90%;
-      max-width: 500px;
+        padding: 60px 20px;
     }
 
+    .story-content h1 {
+        font-size: 36px;
+    }
+
+    .story-content p {
+        font-size: 16px;
+    }
+
+    .story-image img {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    /* Footer adjustments */
     .footer-content {
-        flex-direction: column; /* stack social media and business hours */
-        gap: 20px;              /* smaller gap vertically */
-        align-items: center;    /* center each item horizontally */
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
 
     .social-media {
-        text-align: center;     /* center social links */
+        text-align: center;
     }
 
     .business-hours {
-        text-align: center;     /* center hours text */
+        text-align: center;
     }
 
-    /* Optional: adjust social links for smaller screens */
     .social-media a {
-        margin: 5px 10px;       /* smaller spacing for mobile */
+        margin: 5px 10px;
     }
 
     .business-hours h3 {
-        font-size: 18px;        /* slightly smaller text */
+        font-size: 18px;
     }
-  }
+}

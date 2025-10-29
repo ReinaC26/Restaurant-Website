@@ -164,85 +164,103 @@
     color: #000000;
 }
 
-@media (max-width: 900px) {
-    /* Navbar: show hamburger, hide links */
+   @media (max-width: 900px) {
+    /* Navbar adjustments */
     .nav-links {
-        display: none; /* hide links on mobile until hamburger clicked */
+      display: none; /* hide links until hamburger clicked */
     }
-
+  
     .nav-links.active {
-        display: flex; /* show links when hamburger clicked */
-        flex-direction: column;
-        gap: 15px;
-        background-color: #fffaf3;
-        color: black;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 20px;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      display: flex; /* show links when hamburger clicked */
+      flex-direction: column;
+      gap: 15px;
+      background-color: #fffaf3;
+      color: black;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
-
+  
     .hamburger {
-        display: block;
+      display: block;
     }
-
+  
     /* Menu Section adjustments */
     .menu-section h1 {
-        font-size: 36px;
-        margin-bottom: 30px;
+      font-size: 36px;
+      margin-bottom: 30px;
     }
-
+  
     .category-title {
-        font-size: 28px;
-        margin: 20px 0 15px;
+      font-size: 28px;
+      margin: 20px 0 15px;
     }
-
+  
     /* Grid adjustments */
     .menu-container {
-        grid-template-columns: 1fr; /* single column on mobile */
-        gap: 15px;
-        padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr; /* single column on mobile */
+      gap: 15px;
+      padding: 20px;
     }
-
+  
     .menu-card {
-        padding: 15px;
+      padding: 15px;
+      width: 100%;
     }
-
+  
+    .menu-img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  
     .menu-card h3 {
-        font-size: 18px;
+      font-size: 18px;
     }
-
+  
     .menu-card p {
-        font-size: 15px;
+      font-size: 15px;
+      margin-bottom: 10px;
     }
-
+  
     .menu-card .price {
-        font-size: 16px;
+      font-size: 16px;
     }
-
+  
+    .add-to-cart {
+      position: static; /* make button inline below details on mobile */
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    /* Footer adjustments */
     .footer-content {
-        flex-direction: column; /* stack social media and business hours */
-        gap: 20px;              /* smaller gap vertically */
-        align-items: center;    /* center each item horizontally */
+      flex-direction: column; /* stack social media and business hours */
+      gap: 20px;
+      align-items: center;
     }
-
+  
     .social-media {
-        text-align: center;     /* center social links */
+      text-align: center; /* center social links */
     }
-
+  
     .business-hours {
-        text-align: center;     /* center hours text */
+      text-align: center;
     }
-
-    /* Optional: adjust social links for smaller screens */
+  
     .social-media a {
-        margin: 5px 10px;       /* smaller spacing for mobile */
+      margin: 5px 10px; /* smaller spacing */
     }
-
+  
     .business-hours h3 {
-        font-size: 18px;        /* slightly smaller text */
+      font-size: 18px;
     }
-}
+  }
+  
