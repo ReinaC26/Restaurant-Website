@@ -215,11 +215,12 @@
     }
   
     .menu-img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      margin-bottom: 10px;
-      border-radius: 12px;
+        width: 100%;      /* take full card width */
+        height: auto;     /* maintain aspect ratio */
+        max-height: 250px; /* limit height to avoid collapse */
+        object-fit: cover; 
+        margin-bottom: 10px;
+        display: block;   /* ensure it’s not inline */
     }
   
     .menu-card h3 {
