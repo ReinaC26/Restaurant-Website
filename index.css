@@ -195,12 +195,12 @@
         padding: 20px;
         border-radius: 0 0 8px 8px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        content: url("images/cart2.png");
     }
 
     /* Hamburger icon color when scrolled */
     .navbar.scrolled .hamburger {
         color: black;
-        content: url("images/cart2.png");
     }
 
     /* Navbar dropdown links always black */
