@@ -207,10 +207,10 @@
     .nav-links li a {
         color: black;
     }
-
-    .cart-icon {
-      width: 25px;
-      height: 25px;
+    .nav-links li a img.cart-icon {
+      content: url("images/cart2.png"); /* always cart2.png */
+      width: 25px;   /* optional: adjust size */
+      height: 25px;  /* optional: adjust size */
     }
 
     /* Hero section adjustments */
