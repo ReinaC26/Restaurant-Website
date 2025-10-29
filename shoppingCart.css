@@ -250,7 +250,7 @@
   
     .cart-item img {
       width: 100%;
-      max-width: 300px;
+      max-width: 400px;
       height: auto;
       border-radius: 12px;
     }
@@ -304,5 +304,27 @@
     .cart-header {
       padding: 40px 15px 10px;
     }
+    /* Footer adjustments */
+    .footer-content {
+        flex-direction: column; /* stack social media and business hours */
+        gap: 20px;
+        align-items: center;
+      }
+    
+      .social-media {
+        text-align: center; /* center social links */
+      }
+    
+      .business-hours {
+        text-align: center;
+      }
+    
+      .social-media a {
+        margin: 5px 10px; /* smaller spacing */
+      }
+    
+      .business-hours h3 {
+        font-size: 18px;
+      }
   }
   
