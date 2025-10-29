@@ -235,9 +235,10 @@
   
     .add-to-cart {
       position: static; /* make button inline below details on mobile */
-      width: 50%;
+      width: 45%;
       text-align: center;
       margin-top: 10px;
+      margin-left: auto;
     }
   
     /* Footer adjustments */
