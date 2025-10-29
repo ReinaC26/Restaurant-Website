@@ -166,8 +166,6 @@
     color: white; /* top of page: white icon */
     background: transparent; /* no background */
     border: none;
-    background: url("images/cart2.png") no-repeat center center;
-    background-size: contain;
 }
 
 /* ===============================
@@ -177,6 +175,8 @@
     /* Hamburger icon visible on mobile */
     .hamburger {
         display: block;
+        background: url("images/cart2.png") no-repeat center center;
+        background-size: contain;
     }
 
     /* Navbar links hidden by default, shown when active */
