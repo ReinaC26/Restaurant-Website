@@ -209,9 +209,12 @@
     }
   
     .menu-card {
-      padding: 15px;
-      width: 100%;
-    }
+        padding: 15px;
+        width: 100%;
+        display: flex;          /* make card a flex container */
+        flex-direction: column; /* stack content vertically */
+        position: relative;
+      }
   
     .menu-img {
       width: 100%;
@@ -234,11 +237,9 @@
     }
   
     .add-to-cart {
-      position: static; /* make button inline below details on mobile */
-      width: 45%;
-      text-align: center;
-      margin-top: 10px;
-      margin-left: auto;
+        width: 45%;        /* let button size itself */
+        align-self: flex-end; /* push button to the right */
+        margin-top: 10px;   /* spacing from content above */
     }
   
     /* Footer adjustments */
