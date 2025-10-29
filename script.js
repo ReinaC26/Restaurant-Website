@@ -1,6 +1,4 @@
-// =========================
 // Navbar Highlight + Scroll Effect
-// =========================
 const links = document.querySelectorAll('.nav-links li a');
 const currentPath = window.location.pathname;
 
@@ -39,9 +37,7 @@ if (window.location.pathname === "/index.html" || window.location.pathname === "
   });
 }
 
-// =========================
 // Homepage Slider
-// =========================
 const wrapper = document.querySelector('.slider-wrapper');
 const slides = document.querySelectorAll('.slide');
 const prev = document.querySelector('.prev');
@@ -69,9 +65,7 @@ setInterval(() => showSlide(currentIndex + 1), 5000);
 showSlide(0);
 
 
-// =========================
 // Shopping Cart Functionality
-// =========================
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Add item to cart
@@ -166,7 +160,6 @@ function displayCart() {
                         <button class="checkout-btn">Proceed to Checkout</button>`;
 }
 
-// DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
   // Menu page Add to Cart buttons
   const addButtons = document.querySelectorAll(".add-to-cart");
