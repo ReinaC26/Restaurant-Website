@@ -175,8 +175,6 @@
     /* Hamburger icon visible on mobile */
     .hamburger {
         display: block;
-        background: url("images/cart2.png") no-repeat center center;
-        background-size: contain;
     }
 
     /* Navbar links hidden by default, shown when active */
@@ -208,6 +206,11 @@
     /* Navbar dropdown links always black */
     .nav-links li a {
         color: black;
+    }
+
+    .cart-icon {
+      width: 25px;
+      height: 25px;
     }
 
     /* Hero section adjustments */
