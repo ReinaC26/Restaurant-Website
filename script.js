@@ -74,6 +74,7 @@ showSlide(0);
 // =========================
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+// Add item to cart
 function addToCart(name, price, image) {
   const existingItem = cart.find(item => item.name === name);
 
@@ -87,35 +88,32 @@ function addToCart(name, price, image) {
   alert(`${name} added to cart!`);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Add to Cart buttons on menu page
-  const addButtons = document.querySelectorAll(".add-to-cart");
-  addButtons.forEach(button => {
-    button.addEventListener("click", (e) => {
-      const card = e.target.closest(".menu-card");
-      const name = card.dataset.name;
-      const price = `$${card.dataset.price}`;
-      const image = card.dataset.image ? `images/${card.dataset.image}` : "images/default.jpg";
-      addToCart(name, price, image);
-    });
-  });
-
-  // Display cart on cart page
-  if (window.location.pathname.includes("shoppingCart.html")) {
-    displayCart();
-  }
-});
-
+// Display cart
 function displayCart() {
   const cartContainer = document.getElementById("cart-container");
-  const totalDiv = document.getElementById("cart-total"); // Use existing div
+  const totalDiv = document.getElementById("cart-total"); 
   if (!cartContainer || !totalDiv) return;
 
   cartContainer.innerHTML = ""; // Clear previous items
+
+  // Empty Cart button
+  if (cart.length > 0) {
+    const emptyBtn = document.createElement("button");
+    emptyBtn.textContent = "Empty Cart";
+    emptyBtn.classList.add("empty-cart-btn");
+    emptyBtn.style.alignSelf = "flex-end";
+    emptyBtn.addEventListener("click", () => {
+      cart = [];
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayCart();
+    });
+    cartContainer.appendChild(emptyBtn);
+  }
+
   let total = 0;
 
   if (cart.length === 0) {
-    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    cartContainer.innerHTML += "<p>Your cart is empty.</p>";
     totalDiv.innerHTML = `<h3>Total: $0.00</h3>
                           <button class="checkout-btn">Proceed to Checkout</button>`;
     return;
@@ -127,19 +125,35 @@ function displayCart() {
 
     const itemBox = document.createElement("div");
     itemBox.classList.add("cart-item");
+
     itemBox.innerHTML = `
       <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-      <div class="cart-item-info">
+      <div class="cart-details">
         <h3>${item.name}</h3>
-        <p>Price: ${item.price}</p>
-        <p>Quantity: ${item.quantity}</p>
+        <p class="price">${item.price}</p>
+        <div class="quantity-container">
+          <label>Quantity:</label>
+          <select class="quantity-dropdown">
+            ${[...Array(10)].map((_, i) => 
+              `<option value="${i + 1}" ${item.quantity === i + 1 ? "selected" : ""}>${i + 1}</option>`
+            ).join("")}
+          </select>
+        </div>
       </div>
       <button class="remove-btn">Remove</button>
     `;
 
-    // Remove button functionality
+    // Remove item button
     itemBox.querySelector(".remove-btn").addEventListener("click", () => {
       cart = cart.filter(c => c.name !== item.name);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayCart();
+    });
+
+    // Quantity change
+    const dropdown = itemBox.querySelector(".quantity-dropdown");
+    dropdown.addEventListener("change", (e) => {
+      item.quantity = parseInt(e.target.value);
       localStorage.setItem("cart", JSON.stringify(cart));
       displayCart();
     });
@@ -147,7 +161,27 @@ function displayCart() {
     cartContainer.appendChild(itemBox);
   });
 
-  // Update total section outside of items
+  // Update total
   totalDiv.innerHTML = `<h3>Total: $${total.toFixed(2)}</h3>
                         <button class="checkout-btn">Proceed to Checkout</button>`;
 }
+
+// DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Menu page Add to Cart buttons
+  const addButtons = document.querySelectorAll(".add-to-cart");
+  addButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+      const card = e.target.closest(".menu-card");
+      const name = card.dataset.name;
+      const price = `$${card.dataset.price}`;
+      const image = card.dataset.image ? `images/${card.dataset.image}` : "images/default.jpg";
+      addToCart(name, price, image);
+    });
+  });
+
+  // Display cart if on cart page
+  if (window.location.pathname.includes("shoppingCart.html")) {
+    displayCart();
+  }
+});
