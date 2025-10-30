@@ -15,9 +15,9 @@
     align-items: center;
     padding: 0 20px;
     font-family: 'Inria Serif', serif;
-    background: transparent; /* starts transparent */
+    background: transparent; 
     color: #3b3b3b;
-    transition: background 0.5s ease, box-shadow 0.5s ease; /* smooth transition */
+    transition: background 0.5s ease, box-shadow 0.5s ease; 
     z-index: 10;
 }
 
@@ -52,7 +52,7 @@
 
 /* Footer */
 .footer {
-    background-color: rgba(255, 187, 147, 0.874); /* warm accent */
+    background-color: rgba(255, 187, 147, 0.874);
     color: black;
     padding: 40px 20px 20px;
     text-align: center;
@@ -63,8 +63,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; /* center both items horizontally */
-    gap: 40px; /* space between the two sections */
+    justify-content: center;
+    gap: 40px;
     margin-bottom: 20px;
 }
 

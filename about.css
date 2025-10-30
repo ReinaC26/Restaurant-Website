@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #fffaf3; /* full-page warm background */
+    background-color: #fffaf3;
 }
 .navbar {
     top: 0;
@@ -15,18 +15,18 @@ body, html {
     align-items: center;
     padding: 0 20px;
     font-family: 'Inria Serif', serif;
-    background: transparent; /* <-- transparent background */
+    background: transparent;
 }
 /* header bar scroll */
 .navbar.scrolled {
-    background: #fffaf3; /* solid background when scrolled */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* subtle shadow */
+    background: #fffaf3; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
 }
 
 /* Change text color when scrolled */
 .navbar.scrolled .logo,
 .navbar.scrolled .nav-links li a {
-    color: #000; /* black text */
+    color: #000;
 }
 .cart-icon{
     width: 20px;
@@ -52,16 +52,16 @@ body, html {
 }
 
 .story-section {
-    padding: 80px 40px; /* reduce horizontal padding */
-    background-color: #fffaf3; /* warm, inviting background */
+    padding: 80px 40px; 
+    background-color: #fffaf3; 
     display: flex;
-    flex-direction: column; /* stack content vertically */
+    flex-direction: column; 
     align-items: center;
     gap: 40px;
 }
 
 .story-content {
-    max-width: 800px; /* narrower content */
+    max-width: 800px;
     text-align: center;
     font-family: 'Inria Serif', serif;
     color: #3b3b3b;
@@ -69,13 +69,13 @@ body, html {
 }
 
 .story-content h1 {
-    font-size: 42px; /* slightly smaller for narrow layout */
-    color: #e76f51; /* warm accent */
+    font-size: 42px;
+    color: #e76f51;
     margin-bottom: 25px;
 }
 
 .story-content p {
-    font-size: 17px; /* slightly smaller text for readability */
+    font-size: 17px;
     margin-bottom: 18px;
 }
 
@@ -83,20 +83,20 @@ body, html {
 .story-image {
     display: flex;
     justify-content: center;
-    margin-top: 10px; /* spacing from story content */
+    margin-top: 10px;
 }
 
 .story-image img {
-    width: 70%;          /* narrower image to match content */
-    max-width: 700px;    /* limit max size */
-    height: auto;        /* maintain aspect ratio */
-    border-radius: 12px; /* rounded corners */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow */
-    transition: transform 0.5s ease; /* optional hover effect */
+    width: 70%;          
+    max-width: 700px;   
+    height: auto;       
+    border-radius: 12px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+    transition: transform 0.5s ease; 
 }
 
 .story-image img:hover {
-    transform: scale(1.02); /* subtle zoom on hover */
+    transform: scale(1.02); 
 }
 
 /* Hide hamburger by default on desktop */
@@ -108,9 +108,7 @@ body, html {
   }
   
   
-  /* ===============================
-   Responsive: Mobile / Tablet
-   =============================== */
+  /*  Mobile friendly */
 @media (max-width: 900px) {
     /* Hamburger visible on mobile */
     .hamburger {
